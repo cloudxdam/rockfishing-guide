@@ -1,5 +1,7 @@
 package com.pachedev.rockfishingguide.model.entity;
 
+import java.util.Set;
+
 import com.pachedev.rockfishingguide.model.enums.AccessDifficulty;
 import com.pachedev.rockfishingguide.model.enums.FishingPressure;
 import com.pachedev.rockfishingguide.model.enums.SpotType;
@@ -11,6 +13,7 @@ import jakarta.persistence.Enumerated;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
+import jakarta.persistence.ManyToMany;
 import jakarta.persistence.Table;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
@@ -53,5 +56,8 @@ public class Spot {
     @Column(name = "fishing_pressure")
     @Enumerated(EnumType.STRING)
     private FishingPressure fishingPressure;
+
+    @ManyToMany(mappedBy = "spots")
+    private Set<Species> species;
 
 }

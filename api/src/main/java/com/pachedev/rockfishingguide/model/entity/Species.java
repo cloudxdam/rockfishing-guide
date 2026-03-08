@@ -12,6 +12,10 @@ import jakarta.persistence.Enumerated;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
+import jakarta.persistence.JoinColumn;
+import jakarta.persistence.JoinTable;
+import jakarta.persistence.ManyToMany;
+import jakarta.persistence.OneToMany;
 import jakarta.persistence.Table;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
@@ -51,4 +55,12 @@ public class Species {
     @CollectionTable(name = "species_seasons")
     @Enumerated(EnumType.STRING)
     private Set<Season> seasons;
+
+    @OneToMany(mappedBy = "species")
+    private Set<SpeciesLure> speciesLures;
+
+    @ManyToMany
+    @JoinTable(name = "species_spot", joinColumns = @JoinColumn(name = "species_id"), inverseJoinColumns = @JoinColumn(name = "spot_id"))
+    private Set<Spot> spots;
+
 }

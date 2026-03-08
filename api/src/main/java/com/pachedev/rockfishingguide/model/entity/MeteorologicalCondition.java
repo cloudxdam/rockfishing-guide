@@ -31,8 +31,9 @@ public class MeteorologicalCondition {
     @Column(name = "time")
     private String time;
 
+    @Enumerated(EnumType.STRING)
     @Column(name = "tide_status", nullable = false)
-    private TideStatus TideStatus;
+    private TideStatus tideStatus;
 
     @Column(name = "high_tide_time")
     private String highTideTime;
@@ -44,7 +45,7 @@ public class MeteorologicalCondition {
     @Column(name = "wind_direction")
     private WindDirection windDirection;
 
-    @Column(name = "wind_direction")
+    @Column(name = "wind_speed")
     private Integer windSpeed;
 
     @Enumerated(EnumType.STRING)

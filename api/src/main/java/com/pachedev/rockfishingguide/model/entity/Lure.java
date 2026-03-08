@@ -1,5 +1,7 @@
 package com.pachedev.rockfishingguide.model.entity;
 
+import java.util.Set;
+
 import com.pachedev.rockfishingguide.model.enums.LureType;
 
 import jakarta.persistence.Column;
@@ -9,6 +11,7 @@ import jakarta.persistence.Enumerated;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
+import jakarta.persistence.OneToMany;
 import jakarta.persistence.Table;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
@@ -47,5 +50,8 @@ public class Lure {
 
     @Column(name = "weight", nullable = false)
     private Integer weight;
+
+    @OneToMany(mappedBy = "lure")
+    private Set<SpeciesLure> speciesLures;
 
 }

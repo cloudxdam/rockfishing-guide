@@ -35,24 +35,45 @@ The system is designed with a **relational domain model** to represent the relat
 
 ## Project Structure
 
-
+```text
 rockfishing-guide
-│
 ├── api
-│ ├── src/main/java/com/pachedev/rockfishingguide
-│ │ ├── model
-│ │ │ ├── entity
-│ │ │ └── enums
-│ │ └── RockfishingguideApplication.java
-│ │
-│ ├── src/main/resources
-│ │ └── application.properties
-│ │
-│ └── pom.xml
-
-
----
-
+│   ├── pom.xml
+│   ├── mvnw
+│   ├── mvnw.cmd
+│   ├── src
+│   │   ├── main
+│   │   │   ├── java
+│   │   │   │   └── com
+│   │   │   │       └── pachedev
+│   │   │   │           └── rockfishingguide
+│   │   │   │               ├── RockfishingguideApplication.java
+│   │   │   │               └── model
+│   │   │   │                   ├── entity
+│   │   │   │                   │   ├── CatchRecord.java
+│   │   │   │                   │   ├── Equipment.java
+│   │   │   │                   │   ├── Lure.java
+│   │   │   │                   │   ├── MeteorologicalCondition.java
+│   │   │   │                   │   ├── Species.java
+│   │   │   │                   │   ├── SpeciesLure.java
+│   │   │   │                   │   ├── Spot.java
+│   │   │   │                   │   └── Technique.java
+│   │   │   │                   └── enums
+│   │   │   │                       ├── AccessDifficulty.java
+│   │   │   │                       ├── FishingPressure.java
+│   │   │   │                       ├── LureType.java
+│   │   │   │                       ├── Season.java
+│   │   │   │                       ├── SeaState.java
+│   │   │   │                       ├── SkyCondition.java
+│   │   │   │                       ├── TideStatus.java
+│   │   │   │                       ├── TipType.java
+│   │   │   │                       └── WindDirection.java
+│   │   │   └── resources
+│   │   │       └── application.properties
+│   │   └── test
+│   └── .mvn
+└── README.md
+```
 ## Domain Model
 
 The core entities of the system include:

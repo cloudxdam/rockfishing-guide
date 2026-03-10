@@ -18,10 +18,10 @@ public class CatchRecord {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    @Column(name = "date")
+    @Column(name = "date", nullable = false)
     private LocalDate date;
 
-    @Column(name = "size")
+    @Column(name = "size_cm")
     private Double size;
 
     @Column(name = "weight")

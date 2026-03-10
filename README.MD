@@ -1,5 +1,7 @@
 README.md
-# RockFishing Guide API
+# RockFishing Guide API 
+
+**This project is currently under development. Features and structure may change.**
 
 RockFishing Guide API is a RESTful backend application built with **Spring Boot**.  
 The goal of this project is to provide structured information for anglers practicing **rockfishing**, including fishing spots, species, lures, techniques and environmental conditions.
@@ -48,30 +50,46 @@ rockfishing-guide
 │   │   │   │       └── pachedev
 │   │   │   │           └── rockfishingguide
 │   │   │   │               ├── RockfishingguideApplication.java
-│   │   │   │               └── model
-│   │   │   │                   ├── entity
-│   │   │   │                   │   ├── CatchRecord.java
-│   │   │   │                   │   ├── Equipment.java
-│   │   │   │                   │   ├── Lure.java
-│   │   │   │                   │   ├── MeteorologicalCondition.java
-│   │   │   │                   │   ├── Species.java
-│   │   │   │                   │   ├── SpeciesLure.java
-│   │   │   │                   │   ├── Spot.java
-│   │   │   │                   │   └── Technique.java
-│   │   │   │                   └── enums
-│   │   │   │                       ├── AccessDifficulty.java
-│   │   │   │                       ├── FishingPressure.java
-│   │   │   │                       ├── LureType.java
-│   │   │   │                       ├── Season.java
-│   │   │   │                       ├── SeaState.java
-│   │   │   │                       ├── SkyCondition.java
-│   │   │   │                       ├── TideStatus.java
-│   │   │   │                       ├── TipType.java
-│   │   │   │                       └── WindDirection.java
+│   │   │   │               │
+│   │   │   │               ├── model
+│   │   │   │               │    ├── entity
+│   │   │   │               │    │   ├── CatchRecord.java
+│   │   │   │               │    │   ├── Equipment.java
+│   │   │   │               │    │   ├── Lure.java
+│   │   │   │               │    │   ├── MeteorologicalCondition.java
+│   │   │   │               │    │   ├── Species.java
+│   │   │   │               │    │   ├── SpeciesLure.java
+│   │   │   │               │    │   ├── Spot.java
+│   │   │   │               │    │   └── Technique.java
+│   │   │   │               │    │
+│   │   │   │               │    └── enums
+│   │   │   │               │         ├── AccessDifficulty.java
+│   │   │   │               │         ├── FishingPressure.java
+│   │   │   │               │         ├── LureType.java
+│   │   │   │               │         ├── Season.java
+│   │   │   │               │         ├── SeaState.java
+│   │   │   │               │         ├── SkyCondition.java
+│   │   │   │               │         ├── TideStatus.java
+│   │   │   │               │         ├── TipType.java
+│   │   │   │               │         └── WindDirection.java
+│   │   │   │               │
+│   │   │   │               ├── repository
+│   │   │   │               │   ├── CatchRecordRepository.java
+│   │   │   │               │   ├── EquipmentRepository.java
+│   │   │   │               │   ├── LureRepository.java
+│   │   │   │               │   ├── MeteorologicalConditionRepository.java
+│   │   │   │               │   ├── SpeciesRepository.java
+│   │   │   │               │   ├── SpeciesLureRepository.java
+│   │   │   │               │   ├── SpotRepository.java
+│   │   │   │               │   └── TechniqueRepository.java
+│   │   │   │
 │   │   │   └── resources
 │   │   │       └── application.properties
+│   │   │
 │   │   └── test
+│   │
 │   └── .mvn
+│
 └── README.md
 ```
 ## Domain Model

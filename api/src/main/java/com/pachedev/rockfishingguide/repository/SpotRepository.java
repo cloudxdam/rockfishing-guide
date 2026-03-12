@@ -20,7 +20,7 @@ public interface SpotRepository extends JpaRepository<Spot, Long> {
 
     List<Spot> findByFishingPressure(FishingPressure fishingPressure);
 
-    List<Spot> findBySpecies_Id(Long speciesId);
+    List<Spot> findBySpeciesId(Long speciesId);
 
     List<Spot> findBySpecies_CommonName(String commonName);
 

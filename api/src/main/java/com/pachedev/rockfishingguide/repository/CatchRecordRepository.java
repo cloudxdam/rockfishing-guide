@@ -14,10 +14,10 @@ public interface CatchRecordRepository extends JpaRepository<CatchRecord, Long> 
 
     List<CatchRecord> findBySpotId(Long spotId);
 
-    List<CatchRecord> findBySpeciedId(Long speciesId);
+    List<CatchRecord> findBySpeciesId(Long speciesId);
 
     List<CatchRecord> findByEquipmentId(Long equipmentId);
 
-    List<CatchRecord> findByMetereologicalConditionId(Long meteorologicalConditionId);
+    List<CatchRecord> findByMeteoreologicalConditionId(Long meteorologicalConditionId);
 
 }

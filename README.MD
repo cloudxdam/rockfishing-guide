@@ -6,6 +6,8 @@ The goal of this project is to provide structured information for anglers practi
 
 This API will serve as the backend for a future frontend application.
 
+> Status: **Work in progress**. The current implementation focuses on the domain model and its entity relationships. The REST API and supporting application layers have not yet been implemented.
+
 ---
 
 ## Features
